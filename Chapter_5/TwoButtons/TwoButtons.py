@@ -4,7 +4,7 @@
 import pygame
 from pygame.locals import *
 import pygwidgets
-import sys
+import sys, os
 
 # Define constants
 GRAY = (200, 200, 200)
@@ -18,6 +18,7 @@ window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()  
 
 # 4 - Load assets: image(s), sound(s), etc.
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 barkSound = pygame.mixer.Sound('bark.wav')
 meowSound = pygame.mixer.Sound('meow.wav')
 

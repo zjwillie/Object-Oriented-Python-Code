@@ -3,7 +3,7 @@
 # 1 - Import packages
 import pygame
 from pygame.locals import *
-import sys
+import sys, os
 import random
 
 # 2 - Define constants
@@ -19,6 +19,7 @@ window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()
  
 # 4 - Load assets: image(s), sound(s),  etc.
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 ballImage = pygame.image.load('images/ball.png')
 
 # 5 - Initialize variables

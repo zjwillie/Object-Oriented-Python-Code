@@ -4,7 +4,7 @@
 import pygame
 from pygame.locals import *
 from SimpleButton import *
-import sys
+import sys, os
 
 # Define constants
 GRAY = (200, 200, 200)
@@ -14,6 +14,7 @@ FRAMES_PER_SECOND = 30
 
 # 2 - Initialize the world
 pygame.init()
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()  
 

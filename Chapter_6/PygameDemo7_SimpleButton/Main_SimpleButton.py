@@ -4,7 +4,7 @@
 import pygame
 from pygame.locals import *
 from SimpleButton import *
-import sys
+import sys, os
 
 # Define constants
 GRAY = (200, 200, 200)
@@ -18,7 +18,7 @@ window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()  
 
 # 4 - Load assets: image(s), sounds, etc.
-
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 # 5 - Initialize variables
 # Create an instance of SimpleButton
 oButton = SimpleButton(window, (150, 30),
